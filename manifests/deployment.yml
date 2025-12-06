@@ -28,4 +28,7 @@ spec:
           limits:
             cpu: "200m"
             memory: "100Mi"
+        env:
+          - name: DB_HOST
+            value: mysqldb
             
