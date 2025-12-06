@@ -14,13 +14,13 @@ spec:
       labels:
         app: myapp
     spec:
+      imagePullSecrets:
+       - name: mysecret    
       containers:
       - name: cont-1
         image: akhilg808/clientapp:appimage
         ports:
         - containerPort: 80
-        imagePullSecrets:
-          - name: mysecret
         resources: 
           requests:
             cpu: "100m"
