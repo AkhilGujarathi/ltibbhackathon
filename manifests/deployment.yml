@@ -21,13 +21,6 @@ spec:
         image: akhilg808/clientapp:appimage
         ports:
         - containerPort: 80
-        resources: 
-          requests:
-            cpu: "100m"
-            memory: "50Mi"
-          limits:
-            cpu: "200m"
-            memory: "100Mi"
         env:
           - name: DB_HOST
             value: mysqldb
