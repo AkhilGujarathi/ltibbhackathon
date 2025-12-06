@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dbservice
+  name: mysqldb
   namespace: akhil
 spec:
   ClusterIp: None
