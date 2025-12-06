@@ -15,23 +15,23 @@ spec:
        labels:
          app: dbapp
     spec:
+      imagePullSecrets:
+        - name: mysecret
       containers:
         - name: mycont
           image: akhilg808/clientapp:dbimage
           ports:
             - containerPort: 3306
-          imagePullSecrets:
-            - name: mysecret
-          volumeMounts:
-            - name: www
-              mountPath: /usr/share/nginx/html
           resources: 
             requests:
               cpu: "100m"
               memory: "50Mi"
             limits:
               cpu: "200m"
-              memory: "100Mi"   
+              memory: "100Mi"  
+          volumeMounts:
+             - name: www
+             mountPath: /usr/share/nginx/html 
   volumeClaimTemplates:
   - metadata:
       name: www
