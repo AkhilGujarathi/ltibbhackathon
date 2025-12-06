@@ -11,32 +11,32 @@ spec:
     matchLabels:
       app: dbapp
   template:
-      metadata:
-        labels:
-          app: dbapp
-      spec:
-        containers:
-          - name: mycont
-            image: akhilg808/clientapp:dbimage
-            ports:
-              - containerPort: 3306
-            imagePullSecrets:
-              - name: mysecret
-            volumeMounts:
-              - name: www
-                volumePath: /usr/share/nginx/html
-            resources: 
-              requests:
-                cpu: "100m"
-                memory: "50Mi"
-              limits:
-                cpu: "200m"
-                memory: "100Mi"   
-        volumeClaimTemplates:
-        - metadata:
-            name: www
-          spec:
-            accessModes: ["ReadWriteOnce"]
-            resources:
-              requests:
-                storage:1Gi
+    metadata:
+       labels:
+         app: dbapp
+    spec:
+      containers:
+        - name: mycont
+          image: akhilg808/clientapp:dbimage
+          ports:
+            - containerPort: 3306
+          imagePullSecrets:
+            - name: mysecret
+          volumeMounts:
+            - name: www
+              volumePath: /usr/share/nginx/html
+          resources: 
+            requests:
+              cpu: "100m"
+              memory: "50Mi"
+            limits:
+              cpu: "200m"
+              memory: "100Mi"   
+      volumeClaimTemplates:
+      - metadata:
+        name: www
+        spec:
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 1Gi
