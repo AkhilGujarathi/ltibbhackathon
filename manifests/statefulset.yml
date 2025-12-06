@@ -24,7 +24,7 @@ spec:
             - name: mysecret
           volumeMounts:
             - name: www
-              volumePath: /usr/share/nginx/html
+              mountPath: /usr/share/nginx/html
           resources: 
             requests:
               cpu: "100m"
