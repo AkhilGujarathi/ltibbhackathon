@@ -1,6 +1,6 @@
 ---
 apiVersion: apps/v1
-kind: statefulSet
+kind: StatefulSet
 metadata:
   name: mysql
   namespace: akhil
