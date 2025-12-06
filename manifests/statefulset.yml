@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: statefulSet
 metadata:
-  name: mysqldb
+  name: mysql
   namespace: akhil
 spec:
   serviceName: "mysql"
