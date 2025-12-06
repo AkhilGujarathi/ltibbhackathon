@@ -5,7 +5,7 @@ metadata:
   name: mysqldb
   namespace: akhil
 spec:
-  serviceName: appservice
+  serviceName: "appservice"
   replica: 2
   selectors:
     matchLabels:
