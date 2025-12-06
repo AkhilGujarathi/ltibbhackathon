@@ -21,14 +21,7 @@ spec:
         - name: mycont
           image: akhilg808/clientapp:dbimage
           ports:
-            - containerPort: 3306
-          resources: 
-            requests:
-              cpu: "100m"
-              memory: "50Mi"
-            limits:
-              cpu: "200m"
-              memory: "100Mi"  
+            - containerPort: 3306 
           volumeMounts:
              - name: www
                mountPath: /usr/share/nginx/html 
