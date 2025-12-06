@@ -3,7 +3,7 @@ apiVersion: v1
 kind: ResourceQuote
 metadata:
   name: myrq
-  namespace: namespaceone
+  namespace: akhil
 spec:
   hard:
     requests.cpu: "1000m"
