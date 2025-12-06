@@ -5,7 +5,7 @@ metadata:
   name: mysqldb
   namespace: akhil
 spec:
-  clusterIp: None
+  clusterIP: None
   selector:
     app: dbapp
   ports:
